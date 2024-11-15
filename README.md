@@ -2,15 +2,19 @@
 Author: Hector Shin Emura
 
 Understanding the problem:
-- For this problem, I considered 
+- For this problem, I considered
+  
     Case 1: When there is a unexpected character outside of the XML structure.
             Example: "a<test></test>>" ; "<test></test>a"
             Note that the caracter 'a' in both examples are unexpected, because they are outside of every instance of XML structure
             But "<test1>a<test2></test2><test1>" is valid, because the character 'a' is inside of '<test1>'
+  
     Case 2: If the input string does not have any XML structure
             Example: "test"
+  
     Case 2: When the opening tag and the closing are different
             Example: "<test1></test2>"
+  
     Case 3: When the tags are incorrectly nested
             Example: "<test1><test2></test1><test2>"
             Note that we should close '<test2>' before closing '<test1>'
